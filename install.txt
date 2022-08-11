@@ -1,0 +1,6 @@
+nvim
+tmux
+git
+vscode
+firefox developer edition
+
