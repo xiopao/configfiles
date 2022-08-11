@@ -1,0 +1,9 @@
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore_global
+	fileMode = false
+[user]
+	name = paolo banez
+	email = paolo.banez@intechsive.com
+[commit]
+	template = ~/.git_commit_template.txt

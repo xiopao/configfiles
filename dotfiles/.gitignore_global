@@ -1,0 +1,11 @@
+*.todo
+TODO
+notebooks
+*.vim
+.vscode
+
+# bash scripts
+xt*
+
+.env.uat1
+.env.test
