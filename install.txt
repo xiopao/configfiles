@@ -14,3 +14,7 @@ install ripgrep
 
 " for aws-vault to work on fish shell
 sudo apt install gnome-keyring
+
+" install python jedi
+sudo apt install vim-python-jedi
+vim-addons install python-jedi
