@@ -1,6 +1,16 @@
+fish terminal
 nvim
 tmux
 git
 vscode
 firefox developer edition
 
+" terminal
+sudo apt install unzip
+npm install -g tree-sitter-cli
+
+" for live grep telescope nvim
+install ripgrep
+
+" for aws-vault to work on fish shell
+sudo apt install gnome-keyring
