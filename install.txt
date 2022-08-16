@@ -9,6 +9,9 @@ firefox developer edition
 sudo apt install unzip
 npm install -g tree-sitter-cli
 
+" install fd
+sudo apt install fd-find
+
 " for live grep telescope nvim
 install ripgrep
 
@@ -18,3 +21,4 @@ sudo apt install gnome-keyring
 " install python jedi
 sudo apt install vim-python-jedi
 vim-addons install python-jedi
+

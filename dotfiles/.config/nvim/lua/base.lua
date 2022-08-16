@@ -4,6 +4,7 @@ vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
 vim.wo.number = true
+vim.wo.relativenumber = true
 
 vim.opt.title = true
 vim.opt.autoindent = true
@@ -31,6 +32,7 @@ vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
 
 vim.g.mapleader = " "
+vim.g.cursorhold_updatetime = 100
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
