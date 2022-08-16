@@ -11,6 +11,7 @@ packer.startup(function(use)
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
+  use "rebelot/kanagawa.nvim"
 
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'glepnir/lspsaga.nvim' -- LSP UIs

@@ -5,32 +5,32 @@ bufferline.setup {
   options = {
     mode = 'tabs',
     separator_style = 'slant',
-    always_show_bufferline = false,
+    always_show_bufferline = true,
     show_buffer_close_icons = false,
     show_close_icon = false,
     color_icons = true
   },
   highlights = {
     separator = {
-      guifg = '#073642',
-      guibg = '#002b36'
+      fg = '#25252f',
+      bg = '#242431'
     },
     separator_selected = {
-      guifg = '#073642'
+      fg = '#25252f'
     },
     background = {
-      guifg = '#657b83',
-      guibg = '#002b36'
+      fg = '#657b83',
+      bg = '#242431'
     },
     buffer_selected = {
-      guifg = '#fdf6e3',
-      gui = 'bold'
+      fg = '#fdf6e3',
+      bold = true
     },
     fill = {
-      guibg = '#073642'
+      bg = '#25252f'
     }
   }
 }
 
-vim.api.nvim_set_keymap('n', '<Tab>', '<cmd>BufferLineCycleNext<cr>', {})
-vim.api.nvim_set_keymap('n', '<S-Tab>', '<cmd>BufferLineCyclePrev<cr>', {})
+vim.api.nvim_set_keymap('n', '<M-l>', '<cmd>BufferLineCycleNext<cr>', {})
+vim.api.nvim_set_keymap('n', '<M-h>', '<cmd>BufferLineCyclePrev<cr>', {})

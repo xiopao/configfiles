@@ -2,7 +2,16 @@ local status, saga = pcall(require, 'lspsaga')
 if (not status) then return end
 
 saga.init_lsp_saga {
-  server_filetype_map = {}
+  finder_action_keys = {
+    open = "o",
+    vsplit = "s",
+    split = "i",
+    tabe = "<Tab>",
+    quit = "q",
+    scroll_down = "<C-f>",
+    scroll_up = "<C-b>", -- quit can be a table
+  },
+  server_filetype_map = {},
 }
 
 local opts = { noremap = true, silent = true }

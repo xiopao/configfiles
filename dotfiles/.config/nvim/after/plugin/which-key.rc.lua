@@ -46,8 +46,5 @@ which_key.register({
     d = "Find files using variable",
     p = "Preview definition",
     r = "Rename variable"
-  },
-  t = {
-    e = "New tab"
   }
 }, {})
