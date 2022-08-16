@@ -7,6 +7,10 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
+
+  -- Optimiser
+  use 'lewis6991/impatient.nvim'
+
   use {
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
@@ -48,4 +52,7 @@ packer.startup(function(use)
 
   use 'lewis6991/gitsigns.nvim'
   use 'folke/which-key.nvim'
+
+  -- Indentation
+  use 'lukas-reineke/indent-blankline.nvim'
 end)
