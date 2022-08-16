@@ -20,7 +20,12 @@ packer.startup(function(use)
 
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'glepnir/lspsaga.nvim' -- LSP UIs
-  use 'L3MON4D3/LuaSnip' -- Snippet
+
+  -- Snippet
+  use 'rafamadriz/friendly-snippets'
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+
   use 'terrortylor/nvim-comment' -- Commenter
   -- Statusline
   use 'nvim-lualine/lualine.nvim'

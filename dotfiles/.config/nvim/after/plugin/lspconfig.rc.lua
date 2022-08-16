@@ -41,7 +41,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
       group = vim.api.nvim_create_augroup("Format", { clear = true }),
       buffer = bufnr,
-      callback = function() vim.lsp.buf.formatting_seq_sync() end
+      callback = function() vim.lsp.buf.format() end
     })
   end
 
@@ -123,7 +123,7 @@ nvim_lsp.sumneko_lua.setup {
 }
 
 nvim_lsp.jedi_language_server.setup {
-  on_attach = on_attach,
+  on_attach = on_attach
 }
 
 nvim_lsp.jsonls.setup {
