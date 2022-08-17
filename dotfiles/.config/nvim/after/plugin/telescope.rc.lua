@@ -54,6 +54,11 @@ vim.keymap.set('n', ';f',
       hidden = true
     })
   end)
+
+vim.keymap.set('n', '<leader>lr', function()
+  builtin.lsp_references()
+end, { desc = "Show references" })
+
 vim.keymap.set('n', ';r', function()
   builtin.live_grep()
 end)

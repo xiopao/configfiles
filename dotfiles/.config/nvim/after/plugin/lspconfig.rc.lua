@@ -38,7 +38,8 @@ local on_attach = function(client, bufnr)
 
   -- used lsp saga for this bindings
   -- buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  -- buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>',
+    { noremap = true, silent = true, desc = "Go to definition" })
 
   -- formatting
   if client.server_capabilities.documentFormattingProvider then

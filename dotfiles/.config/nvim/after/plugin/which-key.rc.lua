@@ -33,7 +33,6 @@ which_key.register({
   g = {
     D = "Jumps to the declaration",
     i = "List all implementations",
-    d = "Find files using variable",
     p = "Preview definition",
     r = "Rename variable"
   }
