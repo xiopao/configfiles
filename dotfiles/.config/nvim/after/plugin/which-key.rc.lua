@@ -29,16 +29,6 @@ which_key.register({
   },
   s = {
     f = "File browser",
-    s = "Split window",
-    v = "Vertical split window",
-    h = "Move to left window",
-    l = "Move to right window",
-    j = "Move down window",
-    k = "Move up window",
-    ["<left>"] = "Move to left window",
-    ["<right>"] = "Move to right window",
-    ["<down>"] = "Move down window",
-    ["<up>"] = "Move up window",
   },
   g = {
     D = "Jumps to the declaration",

@@ -13,22 +13,19 @@ keymap.set('n', '-', '<C-x>')
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- Clear highlight search
-keymap.set('n', '<leader>h', ':noh<Return>', { silent = true })
+keymap.set('n', '<leader>h', ':noh<Return>', { silent = true, desc = "Turn off highlight" })
+
+-- Close tab
+keymap.set('n', '<leader>q', ':q!<Return>', { silent = true, desc = "Close file" })
+
+-- Save file
+keymap.set('n', '<leader>w', ':w<Return>', { silent = true, desc = "Save file" })
 
 -- New tab
 keymap.set('n', '<C-t>', ':tabedit<Return>', { silent = true })
 -- Split window
-keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
-keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
--- Move window
-keymap.set('', 's<left>', '<C-w>h')
-keymap.set('', 's<up>', '<C-w>k')
-keymap.set('', 's<down>', '<C-w>j')
-keymap.set('', 's<right>', '<C-w>l')
-keymap.set('', 'sh', '<C-w>h')
-keymap.set('', 'sk', '<C-w>k')
-keymap.set('', 'sj', '<C-w>j')
-keymap.set('', 'sl', '<C-w>l')
+keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true, desc = "Split window" })
+keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true, desc = "Vertical split window" })
 
 -- Resize window
 keymap.set('n', '<C-w><left>', '<C-w><')

@@ -32,5 +32,5 @@ bufferline.setup {
   }
 }
 
-vim.api.nvim_set_keymap('n', '<M-l>', '<cmd>BufferLineCycleNext<cr>', {})
-vim.api.nvim_set_keymap('n', '<M-h>', '<cmd>BufferLineCyclePrev<cr>', {})
+vim.api.nvim_set_keymap('n', 'L', '<cmd>BufferLineCycleNext<cr>', {})
+vim.api.nvim_set_keymap('n', 'H', '<cmd>BufferLineCyclePrev<cr>', {})

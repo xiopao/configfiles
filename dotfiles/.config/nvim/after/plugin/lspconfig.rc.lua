@@ -10,14 +10,18 @@ require("nvim-lsp-installer").setup({
 })
 --vim.lsp.set_log_level("debug")
 
+local aerialStatus, aerial = pcall(require, 'aerial')
 local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then return end
+if (not aerialStatus) then return end
 
 local protocol = require('vim.lsp.protocol')
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
+  aerial.on_attach(client, bufnr)
+
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
