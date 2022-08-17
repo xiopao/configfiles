@@ -43,6 +43,8 @@ packer.startup(function(use)
 
   use 'stevearc/aerial.nvim' -- Tagbar alternative
 
+  use { 'phaazon/hop.nvim', branch = 'v2' }
+
   use {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
