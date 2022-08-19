@@ -11,8 +11,6 @@ packer.startup(function(use)
   -- Optimiser
   use 'lewis6991/impatient.nvim'
 
-  use 'antoinemadec/FixCursorHold.nvim'
-
   use 'EdenEast/nightfox.nvim'
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'glepnir/lspsaga.nvim' -- LSP UIs
@@ -27,7 +25,6 @@ packer.startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   -- LSP
   use 'williamboman/nvim-lsp-installer'
-  use "b0o/schemastore.nvim" -- jsonschema
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'hrsh7th/cmp-path' -- nvim-cmp auto complete paths
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
@@ -42,6 +39,8 @@ packer.startup(function(use)
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
 
   use 'stevearc/aerial.nvim' -- Tagbar alternative
+
+  use "b0o/schemastore.nvim" -- jsonschema
 
   use {
     "nvim-neo-tree/neo-tree.nvim",
@@ -63,14 +62,10 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim'
 
   use 'akinsho/nvim-bufferline.lua'
-  use 'norcalli/nvim-colorizer.lua'
 
   use 'lewis6991/gitsigns.nvim'
   use 'folke/which-key.nvim'
 
   -- Splits
   use 'mrjones2014/smart-splits.nvim'
-
-  -- Indentation
-  use 'lukas-reineke/indent-blankline.nvim'
 end)

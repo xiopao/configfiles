@@ -3,4 +3,4 @@ if (not status) then return end
 
 nightfox.setup {}
 
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme carbonfox")
