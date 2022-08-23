@@ -11,6 +11,9 @@ packer.startup(function(use)
   -- Optimiser
   use 'lewis6991/impatient.nvim'
 
+  -- cursor fix
+  use 'antoinemadec/FixCursorHold.nvim'
+
   use 'EdenEast/nightfox.nvim'
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'glepnir/lspsaga.nvim' -- LSP UIs

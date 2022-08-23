@@ -3,18 +3,35 @@ if (not status) then return end
 
 bufferline.setup {
   options = {
+    separator_style = 'slant',
+    show_buffer_close_icons = false,
+    show_close_icon = false,
+    color_icons = true,
     offsets = {
       { filetype = "NvimTree", text = "", padding = 1 },
       { filetype = "neo-tree", text = "", padding = 1 },
       { filetype = "Outline", text = "", padding = 1 },
     },
-    buffer_close_icon = "",
-    modified_icon = "",
-    close_icon = "",
-    max_name_length = 14,
-    max_prefix_length = 13,
-    tab_size = 20,
-    separator_style = "thin",
+  },
+  highlights = {
+    separator = {
+      fg = '#16181c',
+      bg = '#262931',
+    },
+    separator_selected = {
+      fg = '#16181c',
+    },
+    background = {
+      fg = '#657b83',
+      bg = '#262931'
+    },
+    buffer_selected = {
+      fg = '#fdf6e3',
+      bold = true,
+    },
+    fill = {
+      bg = '#16181c'
+    }
   },
 }
 

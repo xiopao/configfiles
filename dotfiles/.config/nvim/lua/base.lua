@@ -13,7 +13,7 @@ vim.opt.showcmd = true
 vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
 vim.opt.expandtab = true
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 5
 vim.opt.shell = 'fish'
 vim.opt.backupskip = '/tmp/*,/private/tmp/*'
 vim.opt.inccommand = 'split'
@@ -24,14 +24,14 @@ vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.ai = true -- Auto indent
-vim.opt.si = true -- Smart indent
+vim.opt.si = true -- Smart indentbase
 vim.opt.wrap = false -- No wrap lines
 vim.opt.backspace = 'start,eol,indent'
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
 
 vim.g.mapleader = " "
-vim.g.cursorhold_updatetime = 100
+vim.g.cursorhold_updatetime = 500
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
