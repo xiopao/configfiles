@@ -12,7 +12,9 @@ saga.init_lsp_saga {
     scroll_down = "<C-f>",
     scroll_up = "<C-b>", -- quit can be a table
   },
-  server_filetype_map = {},
+  server_filetype_map = {
+    typescript = 'typescript'
+  },
 }
 
 local action = require("lspsaga.action")

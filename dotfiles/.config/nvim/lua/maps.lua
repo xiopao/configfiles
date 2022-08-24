@@ -47,4 +47,4 @@ keymap.set('n', '<C-Left>', function() require("smart-splits").resize_left() end
 keymap.set('n', '<C-Right>', function() require("smart-splits").resize_right() end, { desc = "Resize right" })
 
 -- Prettier plugin
-keymap.set('n', '<C-M-f>', ':Prettier<Return>', { desc = "Format document" })
+keymap.set('n', '<M-F>', ':Prettier<Return>', { desc = "Format document", silent = true })
