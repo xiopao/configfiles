@@ -127,7 +127,7 @@ nvim_lsp.sumneko_lua.setup {
   }
 }
 
-nvim_lsp.pyright.setup {
+nvim_lsp.pylsp.setup {
   on_attach = on_attach,
   filtypes = { "python" }
 }
