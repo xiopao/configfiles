@@ -1,5 +1,7 @@
 local keymap = vim.keymap
 
+keymap.set('n', '<C-z>', '<nop>')
+
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')
 
