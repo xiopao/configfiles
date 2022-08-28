@@ -129,9 +129,3 @@ export PATH="$HOME/.poetry/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
-
-alias mux='pgrep -vx tmux > /dev/null && \
-        tmux new -d -s delete-me && \
-        tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && \
-        tmux kill-session -t delete-me && \
-        tmux attach || tmux attach'
