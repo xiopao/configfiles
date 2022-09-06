@@ -17,7 +17,6 @@ saga.init_lsp_saga {
   },
 }
 
-local action = require("lspsaga.action")
 local codeaction = require("lspsaga.codeaction")
 
 local opts = { noremap = true, silent = true }
@@ -28,12 +27,3 @@ vim.keymap.set('n', 'gp', '<Cmd>Lspsaga preview_definition<cr>', opts)
 vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<cr>', opts)
 
 vim.keymap.set("n", "<leader>ca", codeaction.code_action, { silent = true, desc = "Code action" })
-
--- scroll down hover doc or scroll in definition preview
-vim.keymap.set("n", "<C-f>", function()
-  action.smart_scroll_with_saga(1)
-end, { silent = true })
--- scroll up hover doc
-vim.keymap.set("n", "<C-b>", function()
-  action.smart_scroll_with_saga(-1)
-end, { silent = true })

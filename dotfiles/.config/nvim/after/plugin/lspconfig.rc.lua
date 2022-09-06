@@ -10,18 +10,14 @@ require("nvim-lsp-installer").setup({
 })
 --vim.lsp.set_log_level("debug")
 
-local aerialStatus, aerial = pcall(require, 'aerial')
 local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then return end
-if (not aerialStatus) then return end
 
 local protocol = require('vim.lsp.protocol')
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-  aerial.on_attach(client, bufnr)
-
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -106,11 +102,16 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript" },
+  root_dir = function() return vim.loop.cwd() end,
   cmd = { "typescript-language-server", "--stdio" }
 }
 
 nvim_lsp.tailwindcss.setup {
   filetypes = { "typescriptreact", "html" },
+}
+
+nvim_lsp.cssls.setup {
+  filetypes = { "css" },
 }
 
 nvim_lsp.sumneko_lua.setup {
@@ -119,7 +120,7 @@ nvim_lsp.sumneko_lua.setup {
     Lua = {
       diagnostics = {
         -- Get the language server to recognize the 'vim' global
-        globals = { 'vim' }
+        globals = { 'vim', 'love' }
       },
 
       workspace = {

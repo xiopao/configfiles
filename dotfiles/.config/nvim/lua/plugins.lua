@@ -41,8 +41,6 @@ packer.startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as language server to inject LSP diagnostics
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
 
-  use 'stevearc/aerial.nvim' -- Tagbar alternative
-
   use "b0o/schemastore.nvim" -- jsonschema
 
   use {

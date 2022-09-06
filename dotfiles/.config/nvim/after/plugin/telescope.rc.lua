@@ -19,9 +19,6 @@ telescope.setup {
     file_ignore_patterns = { ".git" }
   },
   extensions = {
-    aerial = {
-      show_nesting = false
-    },
     file_browser = {
       theme = "dropdown",
       -- disables netrw and use telescope-file-browser in its place
@@ -45,7 +42,6 @@ telescope.setup {
 }
 
 telescope.load_extension("file_browser")
-telescope.load_extension("aerial")
 
 vim.keymap.set('n', ';f',
   function()
