@@ -1,0 +1,6 @@
+{
+  "suggest.noselect": false,
+  "suggest.enablePreselect": false,
+  "prettier.trailingComma": "es5",
+  "prettier.semi": true
+}
