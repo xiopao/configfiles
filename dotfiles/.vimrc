@@ -78,7 +78,6 @@ set noswapfile
 
 set ignorecase " Ignore case when searching
 set smartcase  " When searching try to be smart about cases
-set nohlsearch " Don't highlight search term
 set incsearch  " Jumping search
 
 " Always show the status line
@@ -123,7 +122,7 @@ nnoremap <silent>L :bnext<CR>
 nnoremap <silent>H :bprev<CR>
 
 " CoC extensions
-let g:coc_global_extensions = ['coc-jedi', 'coc-tsserver', 'coc-json']
+let g:coc_global_extensions = ['coc-pyright', 'coc-tsserver', 'coc-json']
 
 " Add CoC Prettier if prettier is installed
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
@@ -158,9 +157,6 @@ autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 " Use <Tab> for confirm completion.
 " Coc only does snippet and additional edit on confirm.
 inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
-
-" Show signature help while editing
-autocmd CursorHoldI * silent! call CocAction('showSignatureHelp')
 
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')
